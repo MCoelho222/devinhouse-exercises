@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 .main {
     padding: 0px;
     gap: 2px;
@@ -13,6 +14,7 @@
     'left-side-bar central right-side-bar'
     'rodape rodape rodape';
 }
+
 header {
     padding: 5px;
     text-align: center;
@@ -20,33 +22,38 @@ header {
     grid-area: cabecalho;
     background-color: aquamarine;
 }
+
 .left {
     padding: 10px;
     grid-area: left-side-bar;
     background-color: rgb(113, 236, 166);
-    
 }
+
 .left h3 {
     padding: 10px 0;
 }
+
 .left p {
-    
+    text-align = justify;
 }
+
 .right {
     padding: 10px;
     grid-area: right-side-bar;
     background-color:rgb(83, 224, 137);;
 }
+
 .right h3 {
     padding: 0 0 10px 0;
 }
+
 section {
     padding: 0px;
     grid-area: central;
     text-align: center;
     background-color: aquamarine;
-    
 }
+
 section h3 {
     padding: 5px;
     color:black;
@@ -60,7 +67,6 @@ form {
 
 form input {
     border-radius: 3px;
-    
 }
 
 footer {
@@ -74,15 +80,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
-ul {
-   
-}
+
 p, ul {
     font-size: medium;
 }
-div.parceiros {
-    
-}
+
 div.parceiros img{
     width: 100px;
     margin: 20px;
