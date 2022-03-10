@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.main {
+    padding: 0px;
+    gap: 2px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    'cabecalho cabecalho cabecalho '
+    'left-side-bar central right-side-bar'
+    'rodape rodape rodape';
+}
+header {
+    padding: 5px;
+    text-align: center;
+    color: green;
+    grid-area: cabecalho;
+    background-color: aquamarine;
+}
+.left {
+    padding: 10px;
+    grid-area: left-side-bar;
+    background-color: rgb(113, 236, 166);
+    
+}
+.left h3 {
+    padding: 10px 0;
+}
+.left p {
+    
+}
+.right {
+    padding: 10px;
+    grid-area: right-side-bar;
+    background-color:rgb(83, 224, 137);;
+}
+.right h3 {
+    padding: 0 0 10px 0;
+}
+section {
+    padding: 0px;
+    grid-area: central;
+    text-align: center;
+    background-color: aquamarine;
+    
+}
+section h3 {
+    padding: 5px;
+    color:black;
+    background-color: rgb(238, 255, 0);
+}
+
+form {
+    display:grid;
+    gap: 4px;
+}
+
+form input {
+    border-radius: 3px;
+    
+}
+
+footer {
+    color: white;
+    padding: 2px;
+    font-size: small;
+    grid-area: rodape;
+    text-align: center;
+    background-color: rgba(27, 128, 27, 0.6);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+ul {
+   
+}
+p, ul {
+    font-size: medium;
+}
+div.parceiros {
+    
+}
+div.parceiros img{
+    width: 100px;
+    margin: 20px;
+}
+
+h5 {
+    color: rgb(14, 99, 14);
+}
