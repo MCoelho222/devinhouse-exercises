@@ -16,26 +16,26 @@
 header {
     padding: 5px;
     text-align: center;
-    color: green;
+    color: white;
     grid-area: cabecalho;
-    background-color: aquamarine;
+    background-color: rgba(62, 129, 62, 0.8);
 }
 .left {
     padding: 10px;
     grid-area: left-side-bar;
-    background-color: rgb(113, 236, 166);
+    background-color: rgb(214, 245, 227);
     
 }
 .left h3 {
     padding: 10px 0;
 }
 .left p {
-    
+    text-align: justify;
 }
 .right {
     padding: 10px;
     grid-area: right-side-bar;
-    background-color:rgb(83, 224, 137);;
+    background-color: rgb(214, 245, 227);
 }
 .right h3 {
     padding: 0 0 10px 0;
@@ -44,7 +44,7 @@ section {
     padding: 0px;
     grid-area: central;
     text-align: center;
-    background-color: aquamarine;
+    background-color: rgb(214, 245, 227);
     
 }
 section h3 {
