@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <style>
+        body {
+            background-color: aqua;
+            text-align: center;
+        }
+        label {
+            display: block;
+            padding: 0 0 15px 0;
+            font-size: 12pt;
+        }
+        p {
+            font-size: 24pt;
+        }
+        p#hoje {
+            font-size: x-large;
+            background-color: rgb(240, 53, 153);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Qual a sua idade?</h1>
+    </header>
+    <p id="hoje"></p>
+    <div>
+        <label for="idade">Insira sua data de nascimento, o tempo está passando...</label>
+        <input type="date" id="idade" name="idade">
+        <button id="calcular" onclick="calcular()">Calcular</button>
+        <button id="clearbtn" onclick="limpar()">Limpar</button>
+    </div>
+    <div>
+        <p id="resposta"></p>
+    </div>
+</body>
+<script>
+    var dataAtual = new Date()
+    var diaAtual = dataAtual.getDate()
+    var mesAtual = dataAtual.getMonth() + 1 //adiciona pois começa em zero
+    var anoAtual = dataAtual.getFullYear()
+
+    setInterval(function hora() {
+        var dataAtual = new Date()
+        var horaAtual = document.getElementById("hoje")
+        var hour = dataAtual.getHours()
+        var min = '0' + dataAtual.getMinutes()
+        var sec = '0' + dataAtual.getSeconds()
+        horaAtual.innerHTML = hour + ":" + min.slice(-2) + ":" + sec.slice(-2)
+    }, 1000)
+    
+
+    function limpar() {
+        document.getElementById("idade").value = ""
+        document.getElementById('resposta').innerHTML = ''
+    }
+
+    function calcular() {
+        var birth = document.getElementById("idade").value
+        var birthDay = Number(birth.slice(8, 10))
+        var birthMonth = Number(birth.slice(5, 7))
+        var birthYear = Number(birth.slice(0, 4))
+        var age = anoAtual - birthYear
+        var res = document.getElementById("resposta")
+        
+        if (age == 0) {
+            if (birthMonth == mesAtual) {
+                var dias = diaAtual - birthDay
+                if (dias == 0) {
+                    res.innerHTML = "Você é um recém-nascido."
+                } else {
+                    res.innerHTML = `Você tem ${dias} dias.`
+                }
+            }
+            if (birthMonth > mesAtual) {
+                res.innerHTML = 'Você está para nascer!'
+            }
+            if (birthMonth < mesAtual) {
+                res.innerHTML = 'Você não completou 1 ano.'
+            }
+        }
+
+        if (age < 0) {
+            res.innerHTML = "Puxa vida, você ainda vai nascer..."
+        }
+
+        if (age > 0) {
+            if (birthMonth == mesAtual) {
+                if (birthDay == diaAtual) {
+                    res.innerHTML = `Parabéns seu níver é hoje, você tem ${age} anos!`
+                }
+                if (birthDay > diaAtual) {
+                    var dias = birthDay - diaAtual
+                    if (dias == 1) {
+                        res.innerHTML = `Falta apenas ${dias} dia para você completar ${age} anos!`
+                    } else {
+                        res.innerHTML = `Faltam apenas ${dias} dias para você completar ${age} anos!`
+                    }
+                    
+                }
+                if (birthDay < diaAtual) {
+                    var dias = diaAtual - birthDay
+                    if (dias == 1) {
+                        res.innerHTML = `Parabéns, seu níver foi a ${dias} dia atrás, você completou ${age} anos!`
+                    } else {
+                        res.innerHTML = `Parabéns, seu níver foi a ${dias} dias atrás, você completou ${age} anos!`
+                    }
+                    
+                }
+            }
+            if (birthMonth > mesAtual) {
+                var yourAge = anoAtual - birthYear - 1
+                res.innerHTML = `Você tem ${yourAge} anos.`
+            }
+            if (birthMonth < mesAtual) {
+                res.innerHTML = `Você tem ${age} anos.`
+            }
+        }  
+    }
+    
+
+</script>
+</html>
