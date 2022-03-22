@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        body {
+            background-color: darksalmon;
+            
+        }
+        button:not(#add-item, #btnlimpa) {
+            margin: 0 0 0 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lista de Compras</h1>
+    </header>
+    <label for="item">Item</label>
+    <input type="text" name="item" id="item">
+    <button id="add-item" onclick="addItem()">Adicionar</button>
+    <button id="btnlimpa" onclick="limpa()">Limpar</button>
+    <button id="salva" onclick="saveStorage()">Salvar lista</button>
+    <button id="update" onclick="carrega()">Carregar lista</button>
+    <ul id="lista"></ul>
+</body>
+<script src="./ex08-09-10.js">
+</script>
+</html>
