@@ -1,0 +1,23 @@
+
+body {
+    background-color:indianred;
+}
+header {
+    text-align: center;
+}
+main {
+    display:grid;
+    margin: 50px 600px;
+    gap: 5px;
+}
+div {
+    text-align: center;
+}
+p {
+    background-color:burlywood;
+    padding: 10px;
+    font-size: 20pt;
+}
+
+
+
