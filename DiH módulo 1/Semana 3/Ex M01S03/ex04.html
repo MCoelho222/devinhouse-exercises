@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4 M01S03</title>
+    <style>
+
+        body {
+            background-color: aqua;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Progressão Aritmética</h1>
+    </header>
+    <div>
+        <label for="num1">Valor inicial:</label>
+        <input type="number" id="num1">
+        <label for="num2">Raíz:</label>
+        <input type="number" id="num2">
+        <button id="calcula" onclick="pa()">Calcular</button>
+    </div>
+    <div>
+        <h2>Resultado</h2>
+        <p id="resultado"></p>
+    </div>
+</body>
+<script>
+    function pa() {
+        var a = document.getElementById("num1")
+        var b = document.getElementById("num2")
+        var d = Number(a.value)
+        var e = Number(b.value)
+        var par = document.getElementById("resultado")
+        for(var i = 0;i < 10; i++) {
+            var res = d + e*i
+            if (i==0) {
+                par.innerHTML = String(res)
+            }if (i!=0 && i!=9) {
+                par.innerHTML += ', ' + String(res)
+            }
+            if (i==9) {
+                par.innerHTML += ', ' + String(res) + '.'
+            } 
+        }
+    }
+</script>
+</html>

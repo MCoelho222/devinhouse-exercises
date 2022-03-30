@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon-16x16.png" type="image/x-icon">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de produtos</h1>
+    </header>
+    <main>
+        <div class="title">
+            <h2>Produtos</h2>
+            <span>Lista de Produtos</span>
+        </div>
+        <div class="card">
+            <div class="lineInput">
+                <label for="produto">Produto</label>
+                <input type="text" id="produto" placeholder="Nome do produto">
+            </div>
+
+            <div class="lineInput">
+                <label for="valor">Valor</label>
+                <input type="text" id="valor" placeholder="Valor do produto">
+            </div>
+            <button onclick="produto.salvar()">Salvar</button>
+            <button onclick="produto.cancelar()">Cancelar</button>
+
+            <div class="content">
+                <table border="1">
+                    <thead>
+                        <th class="center">Id</th>
+                        <th>Produto</th>
+                        <th>Valor</th>
+                        <th class="center">Ações</th>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </main>
+</body>
+<script src="./script.js"></script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5 M01S03</title>
+    <style>
+
+        body {
+            background-color: rgb(223, 231, 231);
+            text-align: center;
+        }
+
+        p {
+            font-size: 24px;
+            background-color:blueviolet;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Que horas são?</h1>
+        <p id="hora"></p>
+    </header>
+    
+</body>
+<script>
+    setInterval(horatual, 1000)
+    function horatual() {
+        var data = new Date()
+        var horas = document.getElementById("hora")
+        var hour = data.getHours()
+        var min = '0' + data.getMinutes()
+        var sec = '0' + data.getSeconds()
+        horas.innerHTML = hour + ":" + min.slice(-2) + ":" + sec.slice(-2)
+    }
+</script>
+</html>

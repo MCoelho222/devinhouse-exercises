@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1 M01S03</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<h1>Exercício 1</h1>
+<ul>
+    <li>Perguntar o nome, idade e se gosta de praticar esportes</li>
+    <li>Transcrever respostas por um alert</li>
+</ul>
+</body>
+<script>
+    var nome = window.prompt('Qual o seu nome?');
+    var idade = window.prompt('Qual a sua idade?');
+    var esporte = window.confirm('Você gosta de praticar esportes?');
+
+    if (esporte == true) {
+        window.alert(`Seu nome é ${nome}, você tem ${idade} anos e gosta de praticar esportes.`);
+    } else {
+        window.alert(`Seu nome é ${nome}, você tem ${idade} anos e não gosta de praticar esportes.`);
+    }
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <title>Landing Page</title>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <h2>Licenciamento ambiental - Curso online gratuito</h2>
+            
+        </header>
+        <aside class="left">
+            <h3>Eu posso?</h3>
+            <p>Sim! O curso é direcionado a qualquer profissional da área ambiental, porém, também a qualquer interessado no tema. O ideal é que tenha um conhecimento ambiental básico.</p>
+            <h3>O que eu vou aprender?</h3>
+            <ul>
+                <li>Principais resoluções CONAMA;</li>
+                <li>Passo a passo do licenciamento ambiental;</li>
+                <li>Habilidades importantes no processo;</li>
+                <li>Acompanhamento junto ao órgão licenciador.</li>
+            </ul>
+            <h3>Quando?</h3>
+            <ul>
+                <li>20 a 25 de março</li>
+                <li>das 19h às 22h</li>
+            </ul>
+            <h3>Por que fazer este curso?</h3>
+            <p>
+                O licenciamento ambiental é o instrumento mais utilizado da nossa Política Nacional do Meio Ambiental, a Lei n° 6.938/1981. Todos os empreendimentos listados na resolução CONAMA nº 237 devem passar por um processo de licenciamento ambiental e o profissional habilitado para este fim é o engenheiro ambiental. É de fundamental importância que este profissional esteja bem preparado para agilizar o processo. Caso contrário, o processo poderá levar muito tempo para ser concluído.
+            </p>
+        </aside>
+        <aside class="right">
+            <h3>Inscreva-se aqui</h3>
+            <form action="./subscriptions.html">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Seu melhor e-mail</label>
+                <input type="email" name="email" id="email">
+                <label for="work">Profissão:</label>
+                <input type="text" id="work" name="work">
+                <label for="birthdate">Data de nascimento</label>
+                <input type="text" id="birthdate" name="birthdate">
+                <input class="btn btn-primary" type="button" value="Enviar" onclick="obrigado()">
+                <input class="btn btn-secondary" type="reset">
+            </form>
+
+        </aside>
+        <section>
+            <h3>Inscreva-se já! Vagas limitadas</h3>
+            <img src="./image01.jpg" alt="Paisagem">
+            <h5>Apoio</h5>
+            <div class="parceiros">
+                <img src="https://pbs.twimg.com/media/FH8w-fnXsAA_BSx.png" alt="Logo UFPR">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Logo_IBAMA.svg/1052px-Logo_IBAMA.svg.png" alt="Logo IBAMA">
+            </div>
+        </section>
+        <footer>2022 &middot; MCoelho Environment & Technologies</footer>
+    </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./index.js"></script>
+</html>

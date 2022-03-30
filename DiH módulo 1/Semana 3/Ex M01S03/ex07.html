@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7 M01S03</title>
+    <style>
+        body {
+            background-color: rgb(170, 80, 80);
+        }
+        header {
+            text-align: center;
+        }
+        #input {
+            text-align: center;
+        }
+        #img {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Qual a estação?</h1>
+    </header>
+    <div id="input">
+        <input id="data" type="date">
+        <button id="calc" onclick="station()">Estação</button>
+    </div>
+    <h2 id="est"></h2>
+    <di id="img">
+        <img id="foto" src="" alt="">
+    </div>
+    
+</body>
+<script>
+
+    //Mostra imagem representando a estaçãoreferente a data inserida no input
+    function station() {
+
+        var hoje = document.getElementById('data').value;
+        var split = hoje.split('-');
+        var dataAtual = new Date(split[0], split[1] - 1, split[2]);
+        var diaAtual = dataAtual.getDate();
+        var mesAtual = dataAtual.getMonth() + 1;
+        var anoAtual = dataAtual.getFullYear();
+        var title = document.getElementById('est');
+        var imagem = document.getElementById('foto');
+
+        //Datas limites entre as estações
+        var verao = new Date(anoAtual, 11, 22);
+        var outono = new Date(anoAtual, 2, 22);
+        var inverno = new Date(anoAtual, 5, 22);
+        var primavera = new Date(anoAtual, 8, 22);
+
+        //Condições para seleção da imagem adequada a estação
+
+        if (dataAtual >= outono && dataAtual < inverno) {
+            imagem.src = "https://images.unsplash.com/photo-1583001809873-a128495da465?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b3V0b25vfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+            imagem.alt = "Folhas secas caindo sobre mulher"
+            title.innerHTML = "Outono"
+        }
+
+        if (dataAtual >= inverno && dataAtual < primavera) {
+            imagem.src = "https://images.unsplash.com/photo-1445543949571-ffc3e0e2f55e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2ludGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+            imagem.alt = "Neve sobre árvores"
+            title.innerHTML = "Inverno"
+        }
+
+        if (dataAtual >= primavera && dataAtual < verao) {
+            imagem.src = "https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+            imagem.alt = "Flores amarelas"
+            title.innerHTML = "Primavera"
+        }
+        
+        if (dataAtual >= verao || dataAtual < outono) {
+            imagem.src = "https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+            imagem.alt = "Flores amarelas"
+            title.innerHTML = "Verão"
+        }
+    }
+</script>
+</html>
