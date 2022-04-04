@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ex05 M01S05</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 5 Semana 5</h1>
+    <h3>Usando Parâmetros Rest</h3>
+    <p>O resultado da função soma(<I>a, ...nums</I>) com parâmetros (10, 225, 334, 427) é 796 e pode ser visto também no console.</p>
+    <h3>Função soma() exportada</h3>
+    <code>
+        <p>// calcula a soma dos números passados como argumentos </p>
+        <p>
+            export function soma(a, ...nums) { <br>
+                let arg = Number(a); <br>
+                let result = arg + nums.reduce((acc, <br> item) => acc + item, 0); <br>
+                return result <br>
+            };
+        </p>
+        
+    </code>
+    <h3>Função soma() implementada em outro módulo</h3>
+    <code>
+        <p>import {soma} from './utils.js';</p>
+        <p>console.log(soma(10, 25, 334, 427)); // 796
+        </p>
+    </code>
+    <script src="./app.js" type="module"></script>
+</body>
+</html>

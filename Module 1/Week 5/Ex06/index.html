@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ex06 M01S05</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 6 Semana 5</h1>
+    <p>Uma função que concatena arrays utilizando <strong>Spread</strong></p>
+    <h3>Código exportado de <i>utils.js</i></h3>
+    <code>
+        <p>// função recebe arrays e concatena</p>
+        <p>
+            export function concatena(a, ...arrs) { <br>
+                let result = [...a]; <br>
+                arrs.forEach(item => { <br>
+                    let arr = item; <br>
+                    result = [...result,...arr]; <br>
+                }) <br>
+                return result; <br>
+            };
+        </p>
+    </code>
+    <h3>Código importado em <i>app.js</i> e executado</h3>
+    <code>
+        <p>import {concatena} from './utils.js';</p>
+        <p>console.log(concatena([1, 2, 3], [4, 5, 6], [7, 8, 9])); // [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+    </code>
+    <script src="./app.js" type="module"></script>
+</body>
+</html>

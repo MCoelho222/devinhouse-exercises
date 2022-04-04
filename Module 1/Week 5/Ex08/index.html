@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ex08 M01S05</title>
+    <style>
+        body {
+            background-color: darksalmon;
+        }
+        input {
+            display: block;
+            margin: 4px;
+        }
+        #btnCompra {
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <h1>Rest e Reduce</h1>
+        <p>
+            <code>
+                soma(a, ...objs) {<br>
+                    let total = a.valor * a.qtd + objs.reduce(<br>(acc, item) => acc + item.qtd * item.<br>valor, 0);<br>
+                    return total<br>
+                };
+            </code>
+        </p>
+    </header>
+    <div id="carrinho">
+        <h2>Carrinho de compras</h2>
+        <div id="inputs">
+            <input type="text" name="prod" id="prod" placeholder="Produto">
+            <input type="number" name="preco" id="preco" placeholder="Preço">
+            <input type="number" name="qtd" id="qtd" placeholder="Quantidade">
+            <button id="add" onclick="produto.lerDados()">Adicionar</button>
+            <button id="fim" onclick="produto.finaliza()">Finalizar</button>
+            <button id="btnCompra" onclick="produto.reset()">Nova compra</button>
+        </div>
+    </div>
+    <div id="tablePlace">
+        <table id="table">
+            <thead id="thead">
+                <th class="theads">Produto</th>
+                <th class="theads">Valor</th>
+                <th class="theads">Quantidade</th>
+            </thead>
+            <tbody id="tb"></tbody>
+        </table>
+    </div>
+    <script src="./produtos.js"></script>
+</body>
+</html>

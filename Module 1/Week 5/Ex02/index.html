@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Ex02 M01S05</title>
+    <style>
+        body {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Exercício 2 Semana 5
+    </h1>
+
+    <p>Estamos apenas executando e imprimindo no console os métodos de Array.prototype map() e filter()</p>
+    <h3>Código</h3>
+    <p>
+        <code>
+            const arrayNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9] <br>
+            let arrayQuadrados = arrayNumeros.map(item => item**2);<br>
+            let majors = arrayQuadrados.filter(item => item > 30);<br>
+            console.log(majors); // [36, 49, 64, 81]<br>
+            console.log(arrayQuadrados); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
+        </code>
+    </p>
+    
+</body>
+<script src="./app.js"></script>
+</html>
