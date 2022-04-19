@@ -1,6 +1,6 @@
 # O Curso DevinHouse
 
-O curso está divido em 3 módulos.  
+O curso está divido em 3 módulos. Todos os módulos incluem vivências com a empresa Conecta Nuvem.
 
 ## Módulo 1 
 
@@ -12,7 +12,9 @@ Período: 28/02/2022 - 20/05/2022
 * JavaScript e GitHub
 * JavaScript
 * Projeto 1
-* Vivência na empresa Conecta Nuvem
+* VueJS
+* Projeto 2
+
 
 ## Módulo 2
 
