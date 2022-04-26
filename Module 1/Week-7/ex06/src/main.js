@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-//import ViaCep from 'vue-viacep'
+const app = createApp(App)
+app.mount('#app')
 
-createApp(App).mount('#app')
-console.log(typeof(App))
-//Vue.use(ViaCep)
+
+
