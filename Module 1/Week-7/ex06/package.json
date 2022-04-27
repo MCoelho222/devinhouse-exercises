@@ -7,11 +7,11 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "sh deploy.sh"
-    
   },
   "dependencies": {
     "cep-promise": "^4.1.2",
     "core-js": "^3.8.3",
+    "vee-validate": "^4.5.11",
     "viacep": "^1.0.0",
     "vue": "^3.2.13",
     "vue-viacep": "^1.0.4"
