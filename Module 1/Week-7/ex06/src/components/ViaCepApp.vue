@@ -31,8 +31,6 @@ export default {
 }
 #info-list {
     list-style: none;
-    
-    
 }
 .list-title {
     font-size: 0.7em;
