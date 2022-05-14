@@ -11,7 +11,7 @@ app.directive('color', {
 })
 
 app.directive('size', {
-    created(el) {
+    beforeMount(el) {
         el.addEventListener('mouseover', () => {
             el.style ='font-size: 20px'
         })
