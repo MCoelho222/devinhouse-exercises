@@ -61,3 +61,8 @@ add constraint fk_CURSOS_cod_curso foreign key (fk_cod_curso)
 references university.cursos (cod_curso);
 
 alter table university.alunos alter column cotista type char(1)
+
+alter table university.matriculas drop constraint matriculas_pkey;
+
+alter table university.matriculas
+add constraint mat_pk primary key(semestre, fk_mat_alu);
